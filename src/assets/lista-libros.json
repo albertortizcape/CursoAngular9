@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "titulo": "La comunidad del anillo",
+        "resumen": "Inicio",
+        "autor": "J.R.R Tolkien"
+    },
+    {
+        "id": 2,
+        "titulo": "Las dos torres",
+        "resumen": "Preludio",
+        "autor": "J.R.R Tolkien"
+    },
+    {
+        "id": 3,
+        "titulo": "El retorno del rey",
+        "resumen": "Fin?",
+        "autor": "J.R.R Tolkien"
+    }
+ ]

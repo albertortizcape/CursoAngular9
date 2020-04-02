@@ -1,0 +1,13 @@
+<ul>
+    
+</ul>
+
+<h3>
+    Libros vistos
+</h3>
+
+<ul *ngIf="librosVistos.verListado()">
+    <li *ngFor="let libro of librosVistos.verListado()">
+        <{{libro.titulo}}    
+    </li>
+</ul>
