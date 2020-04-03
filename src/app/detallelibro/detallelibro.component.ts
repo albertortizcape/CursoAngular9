@@ -46,7 +46,7 @@ export class DetallelibroComponent implements OnInit {
   }
 
   filtroId(libro) {
-    return libro.Id == this;
+    return libro.id == this;
   }
 
   libroBuscador() {

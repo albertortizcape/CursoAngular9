@@ -10,7 +10,8 @@ import { LibroclickedService } from '../libroclicked.service';
 export class LibrosComponent implements OnInit {
 
   libros: any;
-  errorHttp: boolean;
+  errorHttp: boolean = false;
+  cargando: boolean = true;
 
   constructor(private http: HttpClient, public Libroclicked: LibroclickedService) { 
     
@@ -24,7 +25,7 @@ export class LibrosComponent implements OnInit {
     // Se puede llamar a servicios externos como:
     // https://jsonplaceholder.typicode.com/
     this.http.get('assets/lista-libros.json').subscribe(
-      (respuesta: Response) => {this.libros = respuesta;},
+      (respuesta: Response) => {this.libros = respuesta; this.cargando = false;},
       (respuesta: Response) => {this.errorHttp = true;}
     );
   }
