@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpResponse} from '@angular/common/http';
 import {ActivatedRoute, Params } from '@angular/router';
 
 @Component({
@@ -8,41 +9,34 @@ import {ActivatedRoute, Params } from '@angular/router';
 })
 export class DetallelibroComponent implements OnInit {
 
-  libros: Array<object>;
+  libros: any;
   libroId: number;
   libroClick: any;
+  errorHttp: boolean = false;
+  cargando: boolean = true;
 
-  constructor(private rutausuario: ActivatedRoute) { 
-
-    // Esto debería estar en un servicio
-    this.libros =[
-      {
-        "id": 1,
-        "titulo": "Te veré bajo el hielo",
-        "autor": "Robert Bryndza"
-      },
-      {
-        "id": 2,
-        "titulo": "Dime quién soy",
-        "autor": "Julia Navarro"
-      },
-      {
-        "id": 3,
-        "titulo": "El día que se perdió la cordura",
-        "autor": "Javier Castillo"
-      }
-    ]
-  }
+  constructor(private http: HttpClient,private rutausuario: ActivatedRoute) { }
 
   ngOnInit(): void {
     // Cuando se llama a este componente
+
+    this.cargarLista();
 
     // Método observable, muy importante
     this.rutausuario.params.subscribe(params => {
       // Método asíncrono, va a esperar a que haya un resultado
       this.libroId = params['libroId'];
-      this.libroClick = this.libroBuscador();
+      // this.libroClick = this.libroBuscador();
     });
+  }
+
+  cargarLista() : void{
+    // Se puede llamar a servicios externos como:
+    // https://jsonplaceholder.typicode.com/
+    this.http.get('assets/lista-libros.json').subscribe(
+      (respuesta: Response) => {this.libros = respuesta; this.libroBuscador(); this.cargando = false;},
+      (respuesta: Response) => {this.errorHttp = true;}
+    );
   }
 
   filtroId(libro) {
