@@ -10,7 +10,9 @@ import { CabeceraComponent } from './cabecera/cabecera.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { DetallelibroComponent } from './detallelibro/detallelibro.component';
-import { LibroclickedService } from './libroclicked.service'
+import { LibroclickedService } from './libroclicked.service';
+import { FichalibroComponent } from './fichalibro/fichalibro.component';
+import { RenderdemoComponent } from './renderdemo/renderdemo.component'
 
 const rutas: Routes = [
   // El orden de las rutas es super importante Cuando la app no se comporte como queremos revisar las rutas
@@ -33,7 +35,9 @@ const rutas: Routes = [
     CabeceraComponent,
     InicioComponent,
     NotfoundComponent,
-    DetallelibroComponent
+    DetallelibroComponent,
+    FichalibroComponent,
+    RenderdemoComponent
   ],
   imports: [
     BrowserModule,

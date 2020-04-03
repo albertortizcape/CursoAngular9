@@ -1,2 +1,8 @@
-<h2>{{libroClick.titulo}}</h2>
-<p>{{libroClick.autor}}</p>
+<div class="loader" *ngIf="cargando; else textoAlternativo"></div>
+<div *ngIf="errorHttp">Hay un error en la carga del servicio</div>
+
+<ng-template #textoAlternativo>
+    <!-- Undefined, se debe pintar después de la carga del servicio -->
+    <h2>{{libroClick.titulo}}</h2>
+    <p>{{libroClick.autor}}</p>
+</ng-template>
