@@ -1,4 +1,5 @@
 <div class="loader" *ngIf="cargando"></div>
+<div *ngIf="errorHttp">Hay un error en la carga del servicio</div>
 
 <ul>
     <li *ngFor="let libro of libros">
@@ -8,4 +9,3 @@
     </li>
 </ul>
 
-<div *ngIf="errorHttp">Hay un error en la carga del servicio</div>
