@@ -26,7 +26,7 @@ export class DetallelibroComponent implements OnInit {
     this.rutausuario.params.subscribe(params => {
       // Método asíncrono, va a esperar a que haya un resultado
       this.libroId = params['libroId'];
-      // this.libroClick = this.libroBuscador();
+      this.libroClick = this.libroBuscador();
     });
   }
 
@@ -34,7 +34,7 @@ export class DetallelibroComponent implements OnInit {
     // Se puede llamar a servicios externos como:
     // https://jsonplaceholder.typicode.com/
     this.http.get('assets/lista-libros.json').subscribe(
-      (respuesta: Response) => {this.libros = respuesta; this.libroBuscador(); this.cargando = false;},
+      (respuesta: Response) => {this.libros = respuesta; this.cargando = false;},
       (respuesta: Response) => {this.errorHttp = true;}
     );
   }
