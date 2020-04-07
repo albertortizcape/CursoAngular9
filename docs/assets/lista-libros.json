@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "imagen": "https://www.planetadelibros.com/usuaris/libros/fotos/9/m_libros/portada_el-senor-de-los-anillos-ii-las-dos-torres_j-r-r-tolkien_201505211341.jpg",
+        "titulo": "La comunidad del anillo",
+        "resumen": "Inicio",
+        "autor": "J.R.R Tolkien"
+    },
+    {
+        "id": 2,
+        "imagen": "https://www.planetadelibros.com/usuaris/libros/fotos/9/m_libros/portada_el-senor-de-los-anillos-i-la-comunidad-del-anillo_j-r-r-tolkien_201505211345.jpg",
+        "titulo": "Las dos torres",
+        "resumen": "Preludio",
+        "autor": "J.R.R Tolkien"
+    },
+    {
+        "id": 3,
+        "imagen": "https://www.planetadelibros.com/usuaris/libros/fotos/9/m_libros/portada_el-senor-de-los-anillos-iii-el-retorno-del-rey_j-r-r-tolkien_201505211341.jpg",
+        "titulo": "El retorno del rey",
+        "resumen": "Fin?",
+        "autor": "J.R.R Tolkien"
+    }
+ ]
